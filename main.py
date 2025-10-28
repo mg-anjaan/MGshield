@@ -3,7 +3,7 @@ from telebot import types
 import re
 from collections import defaultdict
 
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"  # Replace this later with your token
+BOT_TOKEN = "8407192161:AAFxZTEr50v81cso-8jhkg8CZt8rZGG_TCk"  # Replace this later with your token
 bot = telebot.TeleBot(BOT_TOKEN)
 user_message_count = defaultdict(int)
 user_warnings = defaultdict(int)
