@@ -1,13 +1,12 @@
+import os
 import telebot
-from telebot import types
 import re
 from collections import defaultdict
 
-BOT_TOKEN = "8407192161:AAFxZTEr50v81cso-8jhkg8CZt8rZGG_TCk"  # Replace this later with your token
+BOT_TOKEN = os.getenv("BOT_TOKEN")  # Read from environment variable
 bot = telebot.TeleBot(BOT_TOKEN)
 user_message_count = defaultdict(int)
 user_warnings = defaultdict(int)
-
 MAX_MESSAGES = 5  # flood limit
 LINK_PATTERN = r"(https?://|t\.me|www\.)"
 
