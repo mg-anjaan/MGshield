@@ -39,6 +39,8 @@ def help_command(message):
         "• Flood control (5 msgs)\n"
         "• Anti-link (members only)"
     )
+
+    )
     try:
         bot.reply_to(message, help_text, parse_mode="Markdown")
     except ConnectionError:
