@@ -5,6 +5,18 @@ from collections import defaultdict
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")  # Read from environment variable
 bot = telebot.TeleBot(BOT_TOKEN)
+@bot.my_chat_member_handler()
+def handle_new_chat_member(update):
+    if update.new_chat_member.status in ["administrator", "member"]:
+        chat_id = update.chat.id
+        try:
+            bot.send_message(
+                chat_id,
+                "🤖 *MGShield is now active in this group!*\nMonitoring for spam, flood & links ✅",
+                parse_mode="Markdown"
+            )
+        except Exception as e:
+            print("Error sending activation message:", e)
 user_message_count = defaultdict(int)
 user_warnings = defaultdict(int)
 MAX_MESSAGES = 5  # flood limit
