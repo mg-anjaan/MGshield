@@ -1,17 +1,3 @@
-#!/usr/bin/env python3
-\"\"\"MGshield - Telegram moderation bot (Full Free Version) - Webhook-ready for Render.
-
-Features:
-- Welcome + Verify button
-- Auto-delete links from **members only** with a warning message
-- Profanity filter (configurable)
-- Warn system with auto-ban at WARN_LIMIT
-- Mute / Unmute (temporary mute supported)
-- Flood control using short time-window counters (configurable)
-- JSON-based storage (data/*.json) - no external DB required
-- Webhook mode (set WEBHOOK_URL). Listens on port defined by PORT (default 8080)
-\"\"\"
-
 import os, logging, json, asyncio, html
 from datetime import datetime, timedelta
 from aiohttp import web
