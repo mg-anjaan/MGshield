@@ -4,6 +4,8 @@ import re
 import requests
 from collections import defaultdict
 from requests.exceptions import ConnectionError
+from web import keep_alive
+keep_alive()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")  # Read from environment variable
 bot = telebot.TeleBot(BOT_TOKEN)
